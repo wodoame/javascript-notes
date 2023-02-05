@@ -15,7 +15,14 @@ $.ajax({
   type: 'POST',
   url: '/post_data/',
   data: {
-    key: value
+    key: value, 
+    /*
+    .
+    .
+    .
+    */
+    csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(), 
+    // csrfmiddlewaretoken is a necessary step according to a tutorial I watched
   },
   success: function(data) {
     // Handle the response data
