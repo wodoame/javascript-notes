@@ -1,3 +1,4 @@
+```javascript
 // Example of sending an AJAX request to a Python view in Django using JavaScript:
 
 // Make a GET request to the server for data
@@ -31,7 +32,8 @@ $.ajax({
 });
 
 // In the corresponding Django views.py file:
-
+```
+```python
 from django.http import JsonResponse
 
 def get_data(request):
@@ -49,3 +51,4 @@ def post_data(request):
 
   # Return a JSON response with the processed data
   return JsonResponse({'key': data})
+```
