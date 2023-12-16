@@ -37,3 +37,12 @@
    ```
 
 In summary, while `npm` is primarily focused on package management (installing, managing dependencies, and running scripts), `npx` is a tool for executing Node.js packages without the need to install them globally or locally. It is particularly useful for running commands from packages that you don't want to have permanently installed on your system.
+
+# Extras
+`npx` is designed to intelligently handle the execution of packages, including scenarios where the required package is not already installed. When you run a command with `npx` for the first time, it checks whether the required package is available locally. If not, `npx` will temporarily download and install the package in a local temporary directory. Once the command is executed, `npx` cleans up the temporary environment.
+
+However, `npx` is also smart enough to cache packages locally. This means that if you've previously executed a command with a specific package using `npx`, and that package is still available in the local cache, `npx` can execute the command offline without the need to download and install the package again.
+
+So, when you use `npx` offline, it's likely because the required package is already cached locally from a previous execution. This caching mechanism helps improve the efficiency of running commands, especially when you're repeatedly using the same package.
+
+Keep in mind that the behavior might slightly vary based on the version of `npm` and `npx` you are using, as there can be updates and improvements over time. It's always a good idea to check the official documentation or release notes for the latest details on the behavior of `npx` with respect to offline usage.
