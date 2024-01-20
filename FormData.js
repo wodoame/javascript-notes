@@ -65,7 +65,44 @@
     - Sets a new value for an existing key in the `FormData` object. If the key does not exist, it creates a new key/value pair.
     
     formData.set('username', 'NewJohnDoe');
-    
+
+// The methods I provided earlier are some of the commonly used methods of the `FormData` object.
+// However, there are a few more methods that you might find useful:
+
+// 1. **`entries()`:**
+  // - Returns an iterator allowing you to go through all key/value pairs contained in the FormData object.
+   
+   let formData = new FormData();
+   formData.append('username', 'JohnDoe');
+   
+   for (let entry of formData.entries()) {
+       console.log(entry);
+       // Output: ['username', 'JohnDoe']
+   }
+   
+
+// 2. **`keys()`:**
+   // - Returns an iterator allowing you to iterate over the keys of the FormData object.
+   
+   for (let key of formData.keys()) {
+       console.log(key);
+       // Output: 'username'
+   }
+   
+
+// 3. **`values()`:**
+//    - Returns an iterator allowing you to iterate over the values of the FormData object.
+   
+   for (let value of formData.values()) {
+       console.log(value);
+       // Output: 'JohnDoe'
+   }
+   
+
+// These methods can be useful in scenarios where you need to iterate over the contents of the `FormData` object
+// or work with its entries, keys, or values in a more granular way.
+// Keep in mind that browser compatibility should be considered when using these methods, especially if you're working
+// in an environment with older browsers.
 
 // ### Sending FormData with XMLHttpRequest:
 
