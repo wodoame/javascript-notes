@@ -12,11 +12,10 @@
     
 
 // 2. **From a Form Element:**
-    html
-    <form id="myForm">
-        <input type="text" name="username" />
-        <input type="password" name="password" />
-    </form>
+    // <form id="myForm">
+    //     <input type="text" name="username" />
+    //     <input type="password" name="password" />
+    // </form>
     let formData = new FormData(document.getElementById('myForm'));
     
 
@@ -29,32 +28,32 @@
 // ### FormData Methods:
 
 // 1. **`append(name, value [, filename])`:**
-    - Appends a new key/value pair to the `FormData` object. If the value is a `Blob` or a `File`, you can provide an optional `filename`.
+    // - Appends a new key/value pair to the `FormData` object. If the value is a `Blob` or a `File`, you can provide an optional `filename`.
     
     formData.append('username', 'JohnDoe');
     formData.append('avatar', fileInput.files[0], 'avatar.jpg');
     
 
 // 2. **`delete(name)`:**
-    - Deletes a key/value pair with the specified name from the `FormData` object.
+    // - Deletes a key/value pair with the specified name from the `FormData` object.
     
     formData.delete('password');
     
 
 // 3. **`get(name)`:**
-    - Returns the value associated with the specified name.
+    // - Returns the value associated with the specified name.
     
     let username = formData.get('username');
     
 
 // 4. **`getAll(name)`:**
-    - Returns all values associated with a given name.
+    // - Returns all values associated with a given name.
     
     let values = formData.getAll('interests');
     
 
 // 5. **`has(name)`:**
-    - Returns a boolean indicating whether the `FormData` object contains a certain key.
+    // - Returns a boolean indicating whether the `FormData` object contains a certain key.
     
     if (formData.has('username')) {
         // do something
@@ -62,7 +61,7 @@
     
 
 // 6. **`set(name, value)`:**
-    - Sets a new value for an existing key in the `FormData` object. If the key does not exist, it creates a new key/value pair.
+    // - Sets a new value for an existing key in the `FormData` object. If the key does not exist, it creates a new key/value pair.
     
     formData.set('username', 'NewJohnDoe');
 
