@@ -152,4 +152,5 @@ try {
 }
 
 
-Remember to handle errors appropriately using `try...catch` blocks or handling rejected promises (for asynchronous operations) to prevent uncaught errors from crashing your application.
+// Remember to handle errors appropriately using `try...catch` blocks or handling rejected promises (for asynchronous operations) 
+// to prevent uncaught errors from crashing your application.
