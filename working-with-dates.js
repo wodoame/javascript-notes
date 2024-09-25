@@ -102,6 +102,17 @@ if (date1 < date2) {
 
    // Note: Months are 0-indexed, so January is 0, February is 1, and so on.
 
+// TIP: if you want to know on which day the current month ends
+const date = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0)  // 0th day of next month represents the last day of this month
+const lastDayOfMonth = date.getDate() // get date like 31st, 29th .. so on
+const weekDayOfLastDay = date.getDay() // get the day of the week it is
+
+// TIP: if you are creating a calendar and you want to disable the days which are not in the current month you can find when Sunday starts
+const sundayStarts = lastDayOfMonth - weekDayOfLastDay // explanation: assume the last day of the month is Tuesday, javascript will give 2.
+// That means 2 days ahead of Sunday (note that Sunday starts at 0). If that date of this Tuesday in question is 29th for instance  then Sunday is 29th - 2 that's why the initial formula works
+
+
+
 // 5. **ISO Date String:**
 //    You can also use an ISO date string format with extended year representation.
 
