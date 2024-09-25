@@ -24,6 +24,7 @@ let day = currentDate.getDate();
 let hours = currentDate.getHours();
 let minutes = currentDate.getMinutes();
 let seconds = currentDate.getSeconds();
+let dayOfTheWeek = currentDate.getDay(); // 0=Sunday, 1=Monday, 2=Tuesday, ..., 6=Saturday
 
 
 // ### Formatting Dates:
